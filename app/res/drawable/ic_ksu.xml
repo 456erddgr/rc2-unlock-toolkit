@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  KernelSU's own launcher mark, reproduced from the stock manager so the
+  KernelSU screen keeps its original look.
+
+  Upstream ships this artwork as an adaptive-icon *foreground* on a solid
+  white background (ic_launcher_background = #ffffffff).  Drawn bare on our
+  dark navy field the #1e110d strokes would disappear, so the white plate is
+  baked in here: one white rounded square, then the upstream geometry
+  verbatim (one stroked square plus two filled squares), scaled 0.30 about
+  the artwork's own centre (400,400) into the 108x108 viewport.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- white plate, the upstream adaptive-icon background -->
+    <path
+        android:pathData="M 22 4 H 86 A 18 18 0 0 1 104 22 V 86 A 18 18 0 0 1 86 104 H 22 A 18 18 0 0 1 4 86 V 22 A 18 18 0 0 1 22 4 Z"
+        android:fillColor="#ffffffff" />
+
+    <group
+        android:scaleX="0.30"
+        android:scaleY="0.30"
+        android:translateX="-66"
+        android:translateY="-66">
+        <path
+            android:pathData="M 259 259 H 541 V 541 H 259 V 259 Z"
+            android:strokeColor="#1e110d"
+            android:strokeWidth="18" />
+        <path
+            android:pathData="M 257 257 H 407 V 407 H 257 V 257 Z"
+            android:fillColor="#1e110d" />
+        <path
+            android:pathData="M 393 393 H 543 V 543 H 393 V 393 Z"
+            android:fillColor="#1e110d" />
+    </group>
+</vector>

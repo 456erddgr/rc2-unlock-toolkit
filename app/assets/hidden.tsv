@@ -1,0 +1,135 @@
+设置 / 开发者	com.uav.service.dongledetail.apn.SettingDongleApnActivity	设置图传模块APN
+图传 / 飞行界面	com.dji.component.application.activity.DJILauncherActivity	启动器
+图传 / 飞行界面	com.uav.component.firmwareupgrade.view.FirmwareUpgradeActivity	固件升级
+图传 / 飞行界面	com.uav.component.firmwareupgrade.view.FirmwareUpgradeConnectTipsActivity	固件升级连接
+图传 / 飞行界面	com.uav.component.firmwareupgrade.view.FirmwareUpgradeTipsActivity	固件升级
+图传 / 飞行界面	com.uav.component.firmwareupgrade.view.OTAUpgradeResultActivity	升级
+图传 / 飞行界面	com.uav.component.fpv.FakePlaybackActivity	假回放
+图传 / 飞行界面	com.uav.component.fpv.FpvComponentActivity	图传组件
+图传 / 飞行界面	com.uav.component.fpv.FpvComponentActivityPortrait	图传组件竖屏
+图传 / 飞行界面	com.uav.component.fpv.connection.WifiControlReConnectActivity	WiFi控制连接
+告警 / 全屏通知	com.uavapp.fullscreennotificaion.submodel.realname.ui.RealNameRegisterActivity	实名姓名注册
+回放 / 图库 / 编辑	com.uav.playback.editor.master.MasterShotPreviewActivity	大师镜头预览
+回放 / 图库 / 编辑	com.uav.playback.flyshare.server.ui.FlyShareServerConnectActivity	分享服务连接
+回放 / 图库 / 编辑	com.uav.playback.flyshare.server.ui.FlyShareTransferShieldActivity	分享传输盾
+回放 / 图库 / 编辑	com.uav.playback.main.PlaybackMainActivity	回放
+回放 / 图库 / 编辑	com.uav.playback.preview.cut.PlaybackCutActivity	回放剪辑
+回放 / 图库 / 编辑	com.uav.playback.preview.smartPortrait.PlaybackSmartPortraitActivity	回放智能竖屏
+回放 / 图库 / 编辑	com.uav.playback.ui.folderActivity.GalleryFolderActivity	图库文件夹
+回放 / 图库 / 编辑	com.uav.playback.ui.group.PlaybackPhotoGroupActivity	回放照片分组
+回放 / 图库 / 编辑	com.uav.playback.ui.group.video.PlaybackVideoGroupPreviewActivity	回放视频分组预览
+回放 / 图库 / 编辑	com.uav.playback.ui.pano.sphere.share.SpherePanoShareActivity	球形全景分享
+回放 / 图库 / 编辑	com.uav.playback.ui.panopreview.SpherePanoPreviewActivity	球形全景预览
+回放 / 图库 / 编辑	com.uav.playback.ui.panopreview.exportpanovideo.ExportShootAngleActivity	导出
+回放 / 图库 / 编辑	com.uav.playback.ui.panopreview.video.PreviewPanoramaVideoActivity	预览全景视频
+回放 / 图库 / 编辑	com.uav.playback.ui.playbackPreviewActivity.segmentedit.frame.PlaybackPictureFrameActivity	回放图片帧
+回放 / 图库 / 编辑	com.uav.playback.ui.playbackPreviewActivity.segmentedit.quickshot.QuickShotPreviewActivity	一键镜头预览
+回放 / 图库 / 编辑	com.uav.playback.ui.share.selfbuilt.GallerySelfBuiltShareActivity	图库分享
+回放 / 图库 / 编辑	com.uav.playback.ui.videoPlayActivity.GalleryVideoPlayActivity	图库视频播放
+回放 / 图库 / 编辑	lct.lomo.mediaeditor.editortutorial.EditorTutorialActivity	编辑教程
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.customtemp.qingpai.QingPaiPreviewActivity	预览
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.locallut.view.LocalLutActivity	Local Lut
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.multiple.template.FlyLandMultipleTemplateActivity	模板
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.multiple.template.MultipleTemplateActivity	模板
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.music.chooser.LocalLibraryActivity	Local Library
+回放 / 图库 / 编辑	lct.lomo.sdk.editor.template.ModelVideoCropActivity	视频模板
+找飞机	com.uav.findmydrone.ui.FindMyDroneActivity	查找飞机
+找飞机	com.uav.findmydrone.ui.LostPhotoPreviewActivity	失联照片预览
+找飞机	com.uav.findmydrone.ui.LostVideoPreviewActivity	失联视频预览
+主页 / 设备	com.dji.mainpageui.device.DJIDeviceActivity	设备
+主页 / 设备	com.uav.device.manager.InterConnectAppUpgradeActivity	连接升级
+主页 / 设备	com.uav.device.manager.InterConnectTopoForbidActivity	连接管理
+主页 / 设备	com.uav.device.manager.care.account.ConnectAccountActivity	连接账号
+主页 / 设备	com.uav.device.manager.care.account.DropAccountActivity	账号
+主页 / 设备	com.uav.device.manager.care.bind.BindDroneActivity	飞机
+主页 / 设备	com.uav.device.manager.care.change.ChangeBindDroneActivity	飞机
+主页 / 设备	com.uav.device.manager.care.lost.LostDroneActivity	失联飞机
+主页 / 设备	com.uav.device.manager.care.unbind.UnbindDroneActivity	飞机
+主页 / 设备	com.uav.device.manager.detail.DeviceListDetailActivity	设备列表详情
+主页 / 设备	com.uav.device.manager.gogglessuit.GogglesGuideActivity	飞行眼镜指南
+主页 / 设备	com.uav.device.manager.gogglessuit.GogglesSuitActivity	飞行眼镜
+主页 / 设备	com.uav.device.manager.list.DeviceListActivity	设备列表
+主页 / 设备	com.uav.mainpageui.connectionguide.ConnectionGuideActivity	连接指南
+主页 / 设备	com.uav.mainpageui.connectionguide.StepIndicatorActivity	Step Indicator
+主页 / 设备	com.uav.mainpageui.connectionguide.goggles.ConnectionGuideGogglesActivity	连接指南飞行眼镜
+主页 / 设备	com.uav.mainpageui.increamental.IncrementalConnectActivity	连接
+解禁 / 禁飞区	com.uav.unlocklicenselist.UnlockLicenseManagerActivity	解禁许可管理
+解禁 / 禁飞区	com.uav.unlocklicenselist.map.NFZUnlockAreaMapActivity	禁飞区解禁区域地图
+隐私 / 合规	com.dji.privacyconfig.activity.DJIPrivacyFlowAuthorizeActivity	隐私流程授权
+隐私 / 合规	com.dji.privacyconfig.activity.DJIPrivacyFlowTermsActivity	隐私流程条款
+隐私 / 合规	com.dji.privacyconfig.activity.DJIPrivacyFlowTermsCommonActivity	隐私流程条款通用
+隐私 / 合规	com.uav.privacyconfig.activity.AuthorizationHardwareDetailTermsActivity	授权硬件详情条款
+激活 / 实名	com.uav.activate.care.UAVCareActivity	关怀
+激活 / 实名	com.uav.activate.ui.precaution.PrecautionActivity	注意事项
+激活 / 实名	com.uav.activate.ui.term.ActivateTermsActivity	激活条款
+账号 / 客服	com.dji.account.ui.DJIProductImproveActivity	产品改进
+账号 / 客服	com.uav.accountcenterui.AccountCenterMainActivity	账号
+账号 / 客服	com.uav.accountcenterui.customerserivice.customreport.FeedBackResultActivity	问题反馈
+账号 / 客服	com.uav.accountcenterui.customerserivice.customreport.ImageGridActivity	图片网格
+账号 / 客服	com.uav.accountcenterui.customerserivice.customreport.ProblemDetailActivity	问题详情
+账号 / 客服	com.uav.accountcenterui.customerserivice.customreport.ProblemDetailItemListActivity	问题详情条目列表
+账号 / 客服	com.uav.accountcenterui.customerserivice.shopservice.ShopServiceActivity	商城
+账号 / 客服	com.uav.accountcenterui.setting.developer.gimbalcali.AdvancedGimbalCaliActivity	云台校准
+账号 / 客服	com.uav.accountcenterui.setting.developermode.DevelopAppCaptureBarCodeActivity	Develop App Capture Bar 
+账号 / 客服	com.uav.accountcenterui.setting.privacy.utmissrecord.ui.UtmissRecordActivity	埋点记录
+账号 / 客服	com.uav.accountui.UAVAccountSignActivity	账号签到
+资源 / 安装	dji.assets.InstallActivity	安装资源
+扫描 / 二维码	com.uav.scan.qr.CaptureActivity	Capture
+扫描 / 二维码	lct.lomo.mediaeditor.scantemplate.ScanTemplatePreviewActivity	扫描模板预览
+其他	com.dji.productrgnz.DJIProductNotSupportActivity	产品
+其他	com.uav.calibrationupgradeui.view.CaliUpgradeDetailActivity	校准升级详情
+其他	com.uav.flightrecordui.batchdownload.FlightRecordDownloadActivity	飞行记录下载
+其他	com.uav.flightrecordui.list.FlightRecordActivity2	飞行记录
+其他	com.uav.flightrecordui.map.FlightRecordMapActivity	飞行记录地图
+其他	com.uav.flightrecordui.thumbnail.FlightRecordThumbnailActivity	飞行记录缩略图
+其他	com.uav.mapkit.core.offlinemaps.OfflineMapActivity	地图
+其他	com.uav.permission.PermissionActivity	Permission
+其他	com.uav.productrgnzui.BeaconCompanionActivity	Beacon Companion
+其他	com.uav.productrgnzui.GogglesNotDirectlyConnectedActivity	飞行眼镜
+其他	com.uav.productrgnzui.GogglesUnEncryptionBlockActivity	飞行眼镜
+其他	com.uav.productrgnzui.SingleLiveViewShieldActivity	盾
+其他	com.uav.questionnaire.v2.view.QuizQrCodeActivity	Quiz Qr Code
+其他	com.uav.recommendpointsui.view.UAVServiceWebActivity	网页
+其他	com.uav.service.authentication.AuthenticationActivity	Authentication
+其他	com.uav.service.cloudresource.tips.ResourceDownloadDetailActivity	下载详情
+其他	com.uav.service.dongledetail.DongleDetailInfoActivity	图传模块详情信息
+其他	com.uav.service.esim.ESimUserGuideActivity	SIM指南
+其他	com.uav.service.miniview.UAVLteVasNotifyDetailActivity	4G详情
+其他	com.uav.service.subscription.LteVasWebActivity	4G网页
+其他	com.uav.service.userlog.UserLogUploadActivity	日志上传
+其他	com.uav.service.userlog.select.flightrecord.FlightRecordSelectActivity	飞行记录选择
+其他	com.uav.service.wififast.ui.activity.WiFiFastGuideActivity	指南
+其他	com.uav.service.wififast.ui.guide.WifiFastTransferGuideActivity	WiFi传输指南
+其他	com.uav.service.wififast.ui.shield.WifiControlConnectActivity	WiFi控制连接
+其他	com.uav.service.wififast.ui.shield.WifiFastMultiLinkShieldActivity	WiFi多选盾
+其他	com.uav.service.wififast.ui.shield.WifiFastShieldActivity	WiFi盾
+其他	com.uav.uavdatabaseupgradeui.view.DbUpgradeDetailActivity	升级详情
+其他	com.uav.uavdatabaseupgradeui.view.DbUpgradeImportCeDetailActivity	升级详情
+其他	com.uav.waypoint.missionlib.MissionLibActivity	任务
+其他	com.uav.webviewui.UAVSupportShareWebviewActivity	分享网页
+其他	lct.lomo.mediaeditor.JumpIntervalActivity	Jump Interval
+其他	lct.lomo.mediaeditor.aitemplate.ModelAITemplateCropActivity	模板
+其他	lct.lomo.mediaeditor.aitemplate.multipleclip.ModelAiTemplateMultipleClipCropActivity	模板
+其他	lct.lomo.mediaeditor.dpad.ManualDpadSkipActivity	Manual Dpad Skip
+其他	lct.lomo.mediaeditor.draft.DraftActivity	Draft
+其他	lct.lomo.mediaeditor.draft.lctdraft.LctSdkDraftActivity	Lct Sdk Draft
+其他	lct.lomo.mediaeditor.game.preview.GamePreviewActivity	预览
+其他	lct.lomo.mediaeditor.hardware.FunctionIntroductionActivity	硬件
+其他	lct.lomo.mediaeditor.highlight.PanoramaHighlightActivity	全景
+其他	lct.lomo.mediaeditor.model.TemplateActivity	模板
+其他	lct.lomo.mediaeditor.model.activity.ModelContainerActivity	Model Container
+其他	lct.lomo.mediaeditor.model.activity.ModelEditImportActivity	编辑
+其他	lct.lomo.mediaeditor.model.activity.download.MediaDownloadActivity	下载
+其他	lct.lomo.mediaeditor.preview.MediaEditPreviewActivity	编辑预览
+其他	lct.lomo.mediaeditor.preview.MediaEditPreviewListActivity	编辑预览列表
+其他	lct.lomo.mediaeditor.search.TemplateSearchActivity	模板
+其他	lct.lomo.mediaeditor.share.ComposeShareActivity	分享
+其他	lct.lomo.mediaeditor.share.CreateTagActivity	分享
+其他	lct.lomo.mediaeditor.share.GlobalShareActivity	分享
+其他	lct.lomo.mediaeditor.share.TagActivity	分享
+其他	lct.lomo.mediaeditor.share.publish.UgcCoverSelectActivity	封面选择
+其他	lct.lomo.mediaeditor.share.publish.UgcPublishActivity	Ugc Publish
+其他	lct.lomo.mediaeditor.templatelist.SdkTemplateListActivity	模板列表
+其他	lct.lomo.mediaeditor.video.details.VideoInfoNewActivity	视频信息
+其他	lct.lomo.mediaeditor.visualangle.PanoramaVisualAngleActivity	全景
+其他	lct.lomo.mediaeditor.web.WebViewActivity	网页

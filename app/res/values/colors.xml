@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NEXUS palette: deep navy field, cold hairlines, one electric cyan accent. -->
+    <color name="bg">#FF06090F</color>
+    <color name="bg2">#FF0A1120</color>
+    <color name="card">#FF0E1726</color>
+    <color name="card_low">#FF0B1320</color>
+    <color name="card_press">#FF152033</color>
+    <color name="stroke">#FF1D2A42</color>
+
+    <color name="accent">#FF2BE3FF</color>
+    <color name="accent2">#FF8B5CF6</color>
+    <color name="accent_dim">#FF0E7C9C</color>
+    <color name="accent_bg">#FF0B2C3A</color>
+
+    <color name="btn">#FF16223A</color>
+    <color name="btn_low">#FF111A2C</color>
+    <color name="hero">#FF0B1730</color>
+
+    <color name="text">#FFEAF2FF</color>
+    <color name="text_dim">#FF8A9CB8</color>
+    <color name="text_faint">#FF556178</color>
+
+    <color name="ok">#FF2DD4A7</color>
+    <color name="ok_bg">#FF0A2A24</color>
+    <color name="warn">#FFFFB020</color>
+    <color name="warn_bg">#FF2C2110</color>
+    <color name="bad">#FFFF5C7A</color>
+    <color name="bad_bg">#FF2C1220</color>
+    <color name="divider">#FF152033</color>
+</resources>

@@ -1,0 +1,47 @@
+# ---- 构建产物 ----
+app/out/
+buildtest/
+*.idsig
+
+# ---- 签名材料：永远不要提交 ----
+keys/
+*.jks
+*.keystore
+*.p12
+*.pfx
+
+# ---- 大文件：走 Release 附件，不进仓库（GitHub 单文件硬限制 100MB）----
+release-assets/
+*.mp4
+*.apk
+*.exe
+*.zip
+
+# ---- 逆向工程中间产物（体积大、含设备隐私数据）----
+# 本机 dump 可能含序列号、SSID、设备指纹、第三方包名清单
+recon/
+bb/
+logcat_*.txt
+*_dump.txt
+debug_strings.txt
+
+# ---- 反编译 / 解包输出 ----
+smali_orig/
+dpad_src/
+sysui_src/
+audio_scratch/
+hidden_scratch/
+research/
+mf/
+x/
+toolchain/
+d8probe*/
+tmpd8*/
+__pycache__/
+
+# ---- 系统垃圾 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+*.tmp

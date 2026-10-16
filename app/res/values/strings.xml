@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RC2 NEXUS</string>
+    <string name="title_jump">隐藏功能跳转</string>
+    <string name="title_info">设备信息</string>
+
+    <string name="sec_jump">隐藏设置跳转</string>
+    <string name="sec_jump_desc">一键打开大疆与系统里藏起来的页面</string>
+    <string name="sec_tools">实用工具</string>
+    <string name="sec_tools_desc">常用诊断与快捷操作</string>
+    <string name="sec_info">设备信息</string>
+    <string name="sec_info_desc">遥控器、系统与大疆 App 版本</string>
+
+    <string name="jump_dji">大疆隐藏页面</string>
+    <string name="jump_sys">安卓系统设置</string>
+    <string name="jump_diag">诊断 / 工程</string>
+    <string name="jump_launch">打开</string>
+
+    <string name="info_copy">复制全部</string>
+    <string name="info_copied">已复制到剪贴板</string>
+    <string name="action_back">返回</string>
+    <string name="not_available">本机不可用</string>
+    <string name="launch_failed">打开失败：</string>
+    <string name="launch_ok">已打开</string>
+</resources>

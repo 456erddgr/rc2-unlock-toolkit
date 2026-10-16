@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Rc2Theme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_dim</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+    </style>
+
+    <style name="RowTitle">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RowDesc">
+        <item name="android:textColor">@color/text_dim</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

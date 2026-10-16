@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rc2.toolbox"
+    android:versionCode="58"
+    android:versionName="7.19">
+
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
+
+    <!-- Required for any socket at all: Android gates socket() behind the inet
+         group. AdbShell needs it to reach the root daemon on 127.0.0.1:5555. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Rc2Theme"
+        android:hardwareAccelerated="true">
+
+    <!-- The privileged bridge. A root shell script cannot speak the ADB protocol,
+         and DJI stubbed out /system/bin/content (no content.jar), so the bridge is
+         a broadcast: the shim drops the command in a spool file, nudges us, and
+         waits for the answer. Anyone local can send this broadcast; the privilege
+         it yields is the unauthenticated root adbd the firmware already exposes
+         on 127.0.0.1:5555. See SuReceiver for the reasoning. -->
+        <receiver
+            android:name=".SuReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.rc2.toolbox.action.SU" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".JumpActivity"       android:label="@string/title_jump"  android:exported="false" />
+        <activity android:name=".InfoActivity"       android:label="@string/title_info"  android:exported="false" />
+        <activity android:name=".SysPanelActivity"   android:label="屏幕与旋转"           android:exported="false" />
+        <activity android:name=".AppsActivity"       android:label="应用管理"              android:exported="false" />
+        <activity android:name=".ShellActivity"      android:label="root 命令行"           android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".HiddenActivity"     android:label="隐藏页面"              android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".FileActivity"       android:label="文件管理器"            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".KsuActivity"        android:label="KernelSU"              android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".LogActivity"        android:label="系统日志"              android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".KernelActivity"     android:label="内核工具"              android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".DjiActivity"        android:label="大疆工程工具"           android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".MemActivity"        android:label="扩展运行内存"           android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+
+        <receiver android:name=".BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
+
+
+
+
+
+
+
+
+
+
+
+
