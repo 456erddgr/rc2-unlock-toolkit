@@ -128,8 +128,8 @@ DJI RC2 是一台跑 Android 11 的带屏遥控器。它出厂时把 ADB 关着�
 # 1. 确认能连上
 adb devices
 
-# 2. 装工具箱
-adb install -r RC2工具箱v7.19.apk
+# 2. 装工具箱（APK 在 Releases 页面，文件名 RC2-Toolbox-v7.19.apk）
+adb install -r RC2-Toolbox-v7.19.apk
 
 # 3. 打开 App，点「一键部署」
 #    它会依次：
@@ -146,17 +146,17 @@ adb install -r RC2工具箱v7.19.apk
 
 ### 方式二：只用命令行工具
 
-不想装 App 的话，仓库里两个 Windows 工具可以直接用：
+不想装 App 的话，Releases 里两个 Windows 工具可以直接用：
 
 ```
-ADB夺取rc信号.exe     # 打开 RC2 的网络 ADB（127.0.0.1:5555）
+ADB-Unlock-RC.exe     # 打开 RC2 的网络 ADB（127.0.0.1:5555）
 Root-ADB.exe          # 持久化完整权限 Root ADB 安装工具
 ```
 
 典型流程：
 
 ```powershell
-# 1. 用 ADB夺取rc信号.exe 把 ADB 打开
+# 1. 用 ADB-Unlock-RC.exe 把 ADB 打开
 
 # 2. 连接
 adb connect 127.0.0.1:5555
@@ -302,34 +302,40 @@ KernelSU 官方 App 可以装，但**内核里没有 KernelSU 的代码**（`5.4
 
 ### Release 附件（大文件）
 
-> 以下文件通过 GitHub Release 分发，**不在仓库主分支里**（GitHub 单文件硬限制 100 MB）。
+> 以下文件通过 [GitHub Release v7.19](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19) 分发，**不在仓库主分支里**（GitHub 单文件硬限制 100 MB）。
+>
+> 文件名使用 ASCII，因为 GitHub 会剥离附件名中的中文字符。括号内是原始中文名。
 
 | 文件 | 大小 | 说明 |
 |---|---|---|
-| `RC2工具箱v7.19.apk` | 8 MB | 工具箱本体，装这个 |
-| `教程.mp4` | 1.04 GB | 完整视频教程 |
-| `ADB夺取rc信号.exe` | 9.2 MB | 打开 RC2 网络 ADB |
-| `Root-ADB.exe` | 20 MB | 持久化 Root ADB 安装工具 |
+| `RC2-Toolbox-v7.19.apk`（RC2工具箱v7.19.apk） | 7.8 MB | **工具箱本体，装这个** |
+| `ADB-Unlock-RC.exe`（ADB夺取rc信号.exe） | 9.2 MB | 打开 RC2 的网络 ADB（`127.0.0.1:5555`） |
+| `Root-ADB.exe` | 20 MB | 持久化完整权限 Root ADB 安装工具 |
 | `RCRoot-ADB.apk` | 678 KB | 同上，APK 版 |
+| `Tutorial.mp4`（教程.mp4） | 1.04 GB | 完整视频教程 |
 
-### 第三方 App（**不是本项目作品**，仅作本机备份列出）
+### 第三方 App（**不是本项目作品**）
 
-| 文件 | 大小 | 说明 |
+> ⚠️ **以下 App 的著作权属于各自的作者/公司，本项目未获再分发授权。** 它们是在「让 RC2 变得可用」的过程中从设备提取或收集的，**作为本机备份附带，不代表本项目对其拥有任何权利**。
+>
+> **需要的话请从官方渠道获取** —— MT 管理器和 PUDFly 都在正常销售。如果你是其权利人并希望移除，请提 Issue，会立即处理。
+
+| 文件 | 大小 | 原始名 / 说明 |
 |---|---|---|
-| `MT2.26.10.apk` | 36 MB | MT 管理器，第三方文件管理器，**商业软件** |
-| `PUDFly-1.21.10-zh-CN-signed.apk` | 457 MB | PUDFly，第三方 DJI 参数工具，**商业软件** |
-| `PUDFly-1.21.12-fixed手机版.apk` | 679 MB | 同上，另一版本 |
-| `桌面.apk` | 54 MB | DJI 原厂桌面，从设备提取 |
-| `开发助手.apk` | 8.4 MB | DJI 工厂工具 `com.dpad.fuli`，从设备提取 |
-| `系统隐藏工程文件.apk` | 8.4 MB | 与 `开发助手.apk` 内容完全相同（同一文件） |
-| `ADB整过之后才可使用.apk` | 2.5 MB | — |
-| `实现自由装软件.apk` | 3.1 MB | — |
-| `全面屏手势加返回键.apk` | 842 KB | — |
-| `更新文件管理器更新之后无法打开谨慎更新.apk` | 5.3 MB | — |
-| `开发者设置.apk` | 13 KB | — |
-| `跳转隐藏模式打开开发者设置.apk` | 13 KB | — |
+| `MT2.26.10.apk` | 36 MB | MT 管理器 —— **第三方商业软件** |
+| `PUDFly-1.21.10.apk` | 457 MB | PUDFly —— **第三方商业软件** |
+| `PUDFly-1.21.12.apk` | 679 MB | PUDFly 另一版本 —— **第三方商业软件** |
+| `DJI-Launcher.apk` | 54 MB | 桌面.apk —— DJI 原厂桌面，自设备提取 |
+| `DJI-Factory-Assistant.apk` | 8.4 MB | 开发助手.apk —— DJI 工厂工具 `com.dpad.fuli` |
+| `DJI-Factory-Assistant-dup.apk` | 8.4 MB | 系统隐藏工程文件.apk —— **与上一个内容完全相同**（同一文件的两个名字） |
+| `App-Requires-ADB.apk` | 2.5 MB | ADB整过之后才可使用.apk |
+| `App-Free-Install.apk` | 3.1 MB | 实现自由装软件.apk |
+| `App-Gesture-Nav.apk` | 842 KB | 全面屏手势加返回键.apk |
+| `App-FileManager-Update-CAUTION.apk` | 5.3 MB | 更新文件管理器更新之后无法打开谨慎更新.apk |
+| `App-DeveloperSettings.apk` | 13 KB | 开发者设置.apk |
+| `App-Jump-DeveloperSettings.apk` | 13 KB | 跳转隐藏模式打开开发者设置.apk |
 
-> ⚠️ **这些第三方 App 的著作权属于各自的作者/公司，不是本项目所有，也未获得再分发授权。** 它们仅作为「让 RC2 可用」所依赖的组件被列出。如果你需要它们，**请从官方渠道获取**——MT 管理器和 PUDFly 都在正常销售。
+校验和见 Release 说明或 `SHA256SUMS.txt`。
 
 ---
 

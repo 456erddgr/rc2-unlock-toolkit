@@ -45,3 +45,4 @@ desktop.ini
 .DS_Store
 *.log
 *.tmp
+release-assets/

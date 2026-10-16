@@ -1,0 +1,20 @@
+# RC2 解锁工具箱 v7.19 — Release 附件校验和
+# 校验方式：  certutil -hashfile <文件名> SHA256   （或 sha256sum -c SHA256SUMS.txt）
+
+4255cefdf36329f7ccd29ad33bca4642be27b22faa19f1c5ccc6d545e5036633  ADB-Unlock-RC.exe
+e4000ecdf2c65e5f136a446ecb2fc9e8c69ebab0710265375eb6e725e4dc4529  App-DeveloperSettings.apk
+b7a943cf1af7351da9135eeabfa3554f4ca5c9174ebcfb547e21bca030011b69  App-FileManager-Update-CAUTION.apk
+523361acbe62587fa61e00a92369e87daa0d812232b8942deba67771ccf2633a  App-Free-Install.apk
+2a59f36044c8ae6422562c33818bbdf4752ff0c8e82fe714a85169d1a95e02af  App-Gesture-Nav.apk
+2b29de7965b07c5e1f5872c9d15716233cd913f88407f74b7d92727d7b4dae68  App-Jump-DeveloperSettings.apk
+6e273ab0e991c4e79bc8b1bbb9b9dd739ccac1a8712a541a214078886b7b790f  App-Requires-ADB.apk
+58b176eb1e17cacb7522914d282a69a677603ea9026993fc143c6a390211e44f  DJI-Factory-Assistant-dup.apk
+58b176eb1e17cacb7522914d282a69a677603ea9026993fc143c6a390211e44f  DJI-Factory-Assistant.apk
+b6e982989fd8adddf2efe4d45e7d291881828e1fc00bcbd8caa96eeba0d31408  DJI-Launcher.apk
+8f83cef8ac63f76a81e1fee3ededb213f6ba43cc19761e38bc4e567c87edd47d  MT2.26.10.apk
+e7b6c3038b803e50ca7c8c48dd983fc617c981f042691b996da0a032c7690996  PUDFly-1.21.10.apk
+69585132cd42740e805a0cc958b5321c365df74fa08f70a8227c2abe15ecdb46  PUDFly-1.21.12.apk
+2a80078b2eddb2129062166468a313a5801e4e5f8495ab232c4bb2cfe5883ff5  RC2-Toolbox-v7.19.apk
+031a2652221ab44b0c7e65747a9d4941d4b88e0651aab961af36ed7c3c40a811  RCRoot-ADB.apk
+a59bc4755e5bc243a3364ed53e325e0569ac5b9ea2ad70d7747cab01a58f8e76  Root-ADB.exe
+9c88cc4563c32a2655f0a66cc96d657af64061bab246abc80d2a8a892da614ee  Tutorial.mp4
