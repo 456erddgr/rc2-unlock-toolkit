@@ -2,9 +2,9 @@
 
 > **所有文件都可以直接下载，不需要 GitHub 账号、不需要登录。** 点下面的链接就开始下。
 
-**Release 主页**：[**RC2 Toolkit v7.19**](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19) — 17 个文件，共 2.30 GB
+**Release 主页**：[**RC2 Root ADB v7.19**](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19) — 17 个文件，共 2.30 GB
 
-> 📌 **不想全下？** 用这个工具其实只需要 **2 个文件**（下面标 ⭐ 的），一共 **17 MB**。剩下的都是可选的教程和第三方 App。
+> 📌 **不想全下？** 拿到持久化 root ADB 只需要 **2 个文件**（下面标 ⭐ 的），一共 **29 MB**。剩下的都是可选的视频教程、图形界面和第三方 App。
 
 ---
 
@@ -12,24 +12,31 @@
 
 | # | 文件 | 大小 | 下载 | 说明 |
 |---|---|---|---|---|
-| 1 | `ADB-Unlock-RC.exe` | 9.2 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/ADB-Unlock-RC.exe) | 在电脑上运行，打开 RC2 的网络 ADB 端口 |
-| 2 | `RC2-Toolbox-v7.19.apk` | 7.8 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RC2-Toolbox-v7.19.apk) | 工具箱本体，装到遥控器上 |
+| 1 | `ADB-Unlock-RC.exe` | 9.2 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/ADB-Unlock-RC.exe) | **前置**：在电脑上运行，打开 RC2 的网络 ADB，给出一个 root shell |
+| 2 | `Root-ADB.exe` | 20 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/Root-ADB.exe) | **核心**：把那个 root shell 变成开机就在的持久能力 |
 
-**这两步做完就能用了。** 详细步骤看 [安装与使用指南](docs/安装与使用指南.md)。
+**这两步做完，`adb shell` 进去就是 `uid=0(root)`，重启也在。** 详细步骤看 [安装与使用指南](docs/安装与使用指南.md)。
+
+> 两个都是 Windows 程序，**管理员权限**运行，自带 adb/USB 驱动。遥控器那边不用装任何东西。
 
 ---
 
-## 🧰 工具本体（全部）
-
-你自己做的工具，标 ⭐ 的是快速开始里那两个。
+## ⭐ 核心工具（Root ADB）
 
 | 文件 | 大小 | 下载 | 说明 |
 |---|---|---|---|
-| ⭐ `RC2-Toolbox-v7.19.apk` | 7.8 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RC2-Toolbox-v7.19.apk) | **工具箱本体**，装这个 |
-| ⭐ `ADB-Unlock-RC.exe` | 9.2 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/ADB-Unlock-RC.exe) | 打开 RC2 的 ADB（`127.0.0.1:5555`） |
-| `Root-ADB.exe` | 20 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/Root-ADB.exe) | 持久化完整权限 Root ADB 安装工具（PC 版） |
-| `RCRoot-ADB.apk` | 678 KB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RCRoot-ADB.apk) | 同上，APK 版（在遥控器上直接装） |
+| ⭐ `Root-ADB.exe` | 20 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/Root-ADB.exe) | **本项目的核心**：RC331 持久化完整权限 Root ADB 安装工具（PC 版，全自动） |
+| ⭐ `ADB-Unlock-RC.exe` | 9.2 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/ADB-Unlock-RC.exe) | 前置：打开 RC2 的网络 ADB（`127.0.0.1:5555`） |
+| `RCRoot-ADB.apk` | 678 KB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RCRoot-ADB.apk) | 同一个项目的 APK 版（`dev.rc331.rootadb`），随 PC 版一起装进设备，负责开机自愈 |
 | `Tutorial.mp4` | 1.04 GB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/Tutorial.mp4) | 完整视频教程 |
+
+## 🧰 可选：图形界面
+
+| 文件 | 大小 | 下载 | 说明 |
+|---|---|---|---|
+| `RC2-Toolbox-v7.19.apk` | 7.8 MB | [⬇️](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RC2-Toolbox-v7.19.apk) | RC2 工具箱，装到遥控器上点着用。**不是必需的** —— 纯命令行已经能做所有事 |
+
+> ⚠️ 顺序不能反：**先装 Root ADB，再装工具箱。** 工具箱的「临时 root」只是把 Root ADB 装好的 setuid 启动器再执行一次。
 
 ---
 
@@ -69,10 +76,10 @@
 
 ```bash
 # Windows (PowerShell)
-Get-FileHash .\RC2-Toolbox-v7.19.apk -Algorithm SHA256
+Get-FileHash .\Root-ADB.exe -Algorithm SHA256
 
 # macOS / Linux
-shasum -a 256 RC2-Toolbox-v7.19.apk
+shasum -a 256 Root-ADB.exe
 ```
 
 完整校验和列表见仓库根目录的 [`SHA256SUMS.txt`](SHA256SUMS.txt)。
@@ -87,7 +94,7 @@ GitHub 会**剥掉附件名里的中文**，所以全用 ASCII 名上传了。�
 |---|---|
 | `RC2-Toolbox-v7.19.apk` | RC2工具箱v7.19.apk |
 | `ADB-Unlock-RC.exe` | ADB夺取rc信号.exe |
-| `Root-ADB.exe` | Root ADB安装.exe |
+| `Root-ADB.exe` | Root-ADB.exe（原名已是 ASCII，未改动） |
 | `Tutorial.mp4` | 教程.mp4 |
 | `DJI-Launcher.apk` | 桌面.apk |
 | `DJI-Factory-Assistant.apk` | 开发助手.apk |
