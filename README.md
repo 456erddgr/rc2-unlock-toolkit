@@ -31,6 +31,10 @@
 
 **👉 [完整下载清单（DOWNLOADS.md）](DOWNLOADS.md)** —— 所有文件都能直接下，**不需要 GitHub 账号**。
 
+> 🇨🇳 **国内下载慢？用 123 云盘镜像（不限速、免登录）：**
+> **👉 [RC2_手机 · 123 云盘](https://1843626542.share.123pan.cn/123pan/VX07Td-v8SoA?pwd=nRmH)**
+> 提取码 **`nRmH`** ｜ 与 Release 附件内容一致，GitHub 连不上时优先用这个
+
 | | |
 |---|---|
 | ⭐ **核心（必下）** | [`Root-ADB.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/Root-ADB.exe)（20 MB）—— 持久化 root ADB 安装工具 |
