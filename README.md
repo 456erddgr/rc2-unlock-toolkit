@@ -1,15 +1,42 @@
-# RC2 Root ADB · DJI RC2 持久化完整权限 ADB
+# RC2 破解 · DJI RC2 一站式破解工具集
 
-> 把 **DJI RC2 带屏遥控器**（平台代号 `rc331`，高通 QCS5430，Android 11）的 ADB，从「连不上」变成**真正的 root shell**：
+> 一个仓库搞定 **DJI RC2 带屏遥控器**（平台代号 `rc331`，高通 QCS5430，Android 11）的破解与调校：
+> **Root ADB 持久权限** + **电脑版搞机工具箱** + **遥控器版 APP** + **9 个 Magisk 模块**。
 >
-> 装一次，之后 `adb shell` 进去**直接就是 `uid=0(root)`**、带完整 capability（`CapEff=0000003fffffffff`），**重启之后依然在**。
->
-> **不刷机、不解锁 Bootloader、不写任何分区、不烧 eFuse。**
+> 不刷机、不解锁 Bootloader，也能先把真正的 `uid=0(root)` shell 拿到手。
+
+## 四件套
+
+| 部分 | 是什么 | 在哪 |
+|---|---|---|
+| **Root ADB** | 让 `adb shell` 直接进 `uid=0(root)`，重启后依然在；不刷机、不写分区、不烧 eFuse | `Root-ADB.exe`（见下面[下载](#-下载)） |
+| **电脑版工具箱 v6.0** | 性能调频、内存/虚拟内存、风扇温度、Root 模块、应用管理、分区备份、刷机恢复（含 Magisk 刷 Root）、**投屏+点画面操作**、命令终端、扫描设备、自定义壁纸 | [Releases](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest) |
+| **遥控器版 APP v2.25** | 装进遥控器里点着用：总览/性能/风扇/虚拟内存/开机动画/文件/应用/模块/日志/网络 等 14 页 | [`remote/`](remote/) |
+| **Magisk 模块 ×9** | adb 直通 root、免授权弹窗、26 个运维脚本（含黑屏急救）、zram/磁盘 swap、开机动画、酷狗保活、救砖保护… | [`modules/`](modules/) |
+
+### 电脑版
+
+![电脑版工具箱](docs/images/pc-overview.png)
+
+全部工具（adb / fastboot / 界面 / 图标）都打包进 exe，不装 Python、不装依赖，拷到别的 Windows 10/11 双击就能用。
+
+### 安装程序
+
+![安装程序](docs/images/installer.png)
+
+原生界面，**不依赖 Microsoft Edge**，无白边无标题栏；自动建桌面与开始菜单快捷方式，附卸载脚本。
+
+### 遥控器版
+
+![遥控器版](docs/images/remote-app.png)
+
+> 各版本改动见 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
 ## 目录
 
+- [四件套](#四件套)
 - [下载](#-下载)
 - [这是什么](#这是什么)
 - [两条命令用起来](#两条命令用起来)
@@ -25,6 +52,7 @@
 - [常见问题](#常见问题)
 - [第三方组件与来源说明](#第三方组件与来源说明)
 - [免责声明](#免责声明)
+- [更新记录 CHANGELOG](CHANGELOG.md)
 
 ---
 
