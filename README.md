@@ -17,7 +17,8 @@
 - [卸载 / 还原](#卸载--还原)
 - [工作原理](#工作原理)
 - [边界与风险](#边界与风险)
-- [附带：RC2 工具箱（可选图形界面）](#附带rc2-工具箱可选图形界面)
+- [RC2 破解工具箱（电脑版 + 遥控器版）](#rc2-破解工具箱电脑版--遥控器版)
+- [老工具箱 v7.19（可选）](#附带rc2-工具箱可选图形界面)
 - [设备信息](#设备信息)
 - [仓库里有什么](#仓库里有什么)
 - [自己编译工具箱](#自己编译工具箱)
@@ -43,6 +44,79 @@
 | 🧰 **图形界面** | [`RC2-Toolbox-v7.19.apk`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v7.19/RC2-Toolbox-v7.19.apk)（7.8 MB，可选） |
 
 > 两个 exe 都是**在 Windows 电脑上**运行的（需要管理员权限）。遥控器那边不需要装任何东西就能完成 root。
+
+---
+
+## RC2 破解工具箱（电脑版 + 遥控器版）
+
+这个仓库现在就是完整的 **RC2 破解** 项目：把 DJI RC2（rc331）的 ADB 变成持久 root，
+外加一套电脑端「搞机工具箱」和一套装在遥控器里的「遥控器版」APP，以及 9 个 Magisk 模块。
+
+### 下载
+
+| 内容 | 位置 |
+|---|---|
+| 电脑版 · 安装程序（推荐） | [Releases → v6.0-pc-toolbox](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest) 里的 `RC2Toolbox-Setup-6.0.exe` |
+| 电脑版 · 免安装版 | 同上，`RC2Toolbox-6.0.exe` |
+| 遥控器版 APP（v2.25） | [`remote/RC2Toolbox-v2.25.apk`](remote/RC2Toolbox-v2.25.apk) |
+| 9 个 Magisk 模块 | [`modules/`](modules/) |
+| 源码 | [`source/`](source/) |
+| 图标 | [`RC2Toolbox.ico`](RC2Toolbox.ico) |
+
+> 主程序 30MB、安装程序 40MB，放在 Releases 而不是直接进仓库，避免 Git 历史被大二进制撑爆。
+
+### 电脑版能干什么
+
+性能（三簇频率 1.96G / 2.4G / 2.7G + GPU 315-812MHz + 调度策略）、内存与虚拟内存（zram / 磁盘 swap /
+swappiness / drop_caches）、风扇与温度（含背光急救）、Root 与 Magisk 模块、应用管理、分区备份（14 个分区）、
+刷机恢复（Fastboot 识别 / BL 解锁 / 刷分区 / **Magisk 刷 Root 四步**）、**投屏 + 点画面直接操作遥控器**、
+命令终端（ADB + Fastboot，可自己写命令）、扫描设备、自定义壁纸。
+
+**刷 Root 的正确姿势**（Magisk 官方流程，工具只做第 1、4 步）：
+提取 boot 镜像（同时就是备份）→ 传到遥控器 → Magisk App「安装 → 选择并修补一个文件」→
+把 `magisk_patched-*.img` 拷回来 → 工具里「选择补丁镜像」→「刷入补丁」→ 重启。
+
+刷坏了按住「返回键 + 电源键」进 fastboot，用「恢复备份」刷回去。
+
+### 遥控器版（装在遥控器上的那个 APP）
+
+```
+adb install -r --no-incremental --abi arm64-v8a remote/RC2Toolbox-v2.25.apk
+```
+
+第一次打开先看条款，同意后永久记住。14 个页面：总览 / 性能 / 风扇温度 / 虚拟内存 / 应用 / 模块 /
+开机动画 / 文件 / 日志 / 网络 等。
+
+- **开机动画**：支持「同步原时长」（4 秒视频就播 4 秒）和「手动设置」，帧数 12-120、帧率 10-30 可调；
+  生成时流式写 zip，不会把 1.7GB 内存吃爆。
+- **虚拟内存关闭**：纯本地操作（swapoff → 写 disable 标记 → 删文件），秒级完成；再开也能自动重建。
+
+### Magisk 模块（`modules/`）
+
+进 Magisk App → 模块 → 从本地安装。最常用三个：
+`02-adb-direct-root`（adb 一上来就 uid 0）、`03-toolbox-no-auth-popup`（省掉授权弹窗）、
+`04-all-scripts-26-with-screen-rescue`（26 个运维脚本，含黑屏急救 `fix_screen.sh`）。
+
+刷之前确认 `/data/adb/modules` 没有同名旧模块；刷完第一个先重启能正常开机，再刷下一个。
+
+### 保命铁律
+
+1. **不要 unexport pwmchip0**（屏幕背光），黑屏用 `sh /data/adb/modules/rc2_allscripts/scripts/fix_screen.sh` 救
+2. **不要关 zram**，也不要一次 dd 超过 1GB（可用内存只有 1.7GB）
+3. **不要回锁 Bootloader**——RC2 有大疆加密校验，回锁直接变砖（本工具已永久移除该功能）
+4. `swappiness` ≤ 100，`extra_free_kbytes` ≤ 32MB
+5. 刷分区只碰 `boot_a / boot_b / dji_apk / vbmeta_a`
+
+### 已知限制
+
+DJI 的 ROM 从 SELinux 层拦了 `app_process`，scrcpy 的服务端起不来（硬限制）。所以投屏是
+「截图推流」约 1-2 帧/秒，能看能点能滑，但不是 60 帧游戏级投屏。点击是直接往
+`/dev/input/event2` 写触摸事件（`input tap` 会被这台机器静默吞掉）。
+
+---
+
+作者：软糖布丁。本工具与大疆（DJI）无任何关系，未获授权或认可。
+会改系统底层参数，可能导致过热/卡死/变砖/黑屏/数据丢失/保修失效，**后果自负**。
 
 ---
 
@@ -255,7 +329,11 @@ adb shell cat /data/adb-persist/root-adbd.log
 
 ---
 
-## 附带：RC2 工具箱（可选图形界面）
+## 老工具箱 v7.19（可选）
+
+> 这一节讲的是**上一代**遥控器端工具箱（v7.19，源码在 `app/`，仅作历史保留）。
+> 现在用的是**遥控器版 v2.25**，见上文〈RC2 破解工具箱〉一节，APK 在 [`remote/RC2Toolbox-v2.25.apk`](remote/RC2Toolbox-v2.25.apk)。
+
 
 `RC2-Toolbox-v7.19.apk` 是这套东西的**图形外壳**，装到遥控器上直接在屏幕上点。它**不是必需的** —— Root ADB 装好之后，纯命令行已经什么都能干了。
 
@@ -308,6 +386,13 @@ rc2-unlock-toolkit/
 ├── README.md                        # 本文件
 ├── DOWNLOADS.md                     # 完整下载清单（17 个附件，带直链）
 ├── SHA256SUMS.txt                   # 校验和
+├── RC2Toolbox.ico                   # 工具箱图标
+├── remote/                          # 遥控器版 APP（装在 DJI RC2 上）
+│   └── RC2Toolbox-v2.25.apk
+├── modules/                         # 9 个 Magisk 模块（电脑版/遥控器版都用）
+├── source/                          # 电脑版 + 遥控器版源码压缩包
+│   ├── pc-toolbox-src.zip
+│   └── android-toolbox-src.zip
 ├── app/                             # 工具箱（可选 GUI）完整源码
 │   ├── AndroidManifest.xml
 │   ├── src/com/rc2/toolbox/         # 25 个 Java 文件，约 38 万字节
@@ -452,74 +537,3 @@ DJI、DJI RC2、DJI Fly 是深圳市大疆创新科技有限公司的商标。
 ---
 
 ---
-
-## RC2 破解工具箱（电脑版 + 遥控器版）
-
-这个仓库现在就是完整的 **RC2 破解** 项目：把 DJI RC2（rc331）的 ADB 变成持久 root，
-外加一套电脑端「搞机工具箱」和一套装在遥控器里的「遥控器版」APP，以及 9 个 Magisk 模块。
-
-### 下载
-
-| 内容 | 位置 |
-|---|---|
-| 电脑版 · 安装程序（推荐） | [Releases → v6.0-pc-toolbox](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest) 里的 `RC2Toolbox-Setup-6.0.exe` |
-| 电脑版 · 免安装版 | 同上，`RC2Toolbox-6.0.exe` |
-| 遥控器版 APP（v2.25） | [`remote/RC2Toolbox-v2.25.apk`](remote/RC2Toolbox-v2.25.apk) |
-| 9 个 Magisk 模块 | [`modules/`](modules/) |
-| 源码 | [`source/`](source/) |
-| 图标 | [`RC2Toolbox.ico`](RC2Toolbox.ico) |
-
-> 主程序 30MB、安装程序 40MB，放在 Releases 而不是直接进仓库，避免 Git 历史被大二进制撑爆。
-
-### 电脑版能干什么
-
-性能（三簇频率 1.96G / 2.4G / 2.7G + GPU 315-812MHz + 调度策略）、内存与虚拟内存（zram / 磁盘 swap /
-swappiness / drop_caches）、风扇与温度（含背光急救）、Root 与 Magisk 模块、应用管理、分区备份（14 个分区）、
-刷机恢复（Fastboot 识别 / BL 解锁 / 刷分区 / **Magisk 刷 Root 四步**）、**投屏 + 点画面直接操作遥控器**、
-命令终端（ADB + Fastboot，可自己写命令）、扫描设备、自定义壁纸。
-
-**刷 Root 的正确姿势**（Magisk 官方流程，工具只做第 1、4 步）：
-提取 boot 镜像（同时就是备份）→ 传到遥控器 → Magisk App「安装 → 选择并修补一个文件」→
-把 `magisk_patched-*.img` 拷回来 → 工具里「选择补丁镜像」→「刷入补丁」→ 重启。
-
-刷坏了按住「返回键 + 电源键」进 fastboot，用「恢复备份」刷回去。
-
-### 遥控器版（装在遥控器上的那个 APP）
-
-```
-adb install -r --no-incremental --abi arm64-v8a remote/RC2Toolbox-v2.25.apk
-```
-
-第一次打开先看条款，同意后永久记住。14 个页面：总览 / 性能 / 风扇温度 / 虚拟内存 / 应用 / 模块 /
-开机动画 / 文件 / 日志 / 网络 等。
-
-- **开机动画**：支持「同步原时长」（4 秒视频就播 4 秒）和「手动设置」，帧数 12-120、帧率 10-30 可调；
-  生成时流式写 zip，不会把 1.7GB 内存吃爆。
-- **虚拟内存关闭**：纯本地操作（swapoff → 写 disable 标记 → 删文件），秒级完成；再开也能自动重建。
-
-### Magisk 模块（`modules/`）
-
-进 Magisk App → 模块 → 从本地安装。最常用三个：
-`02-adb-direct-root`（adb 一上来就 uid 0）、`03-toolbox-no-auth-popup`（省掉授权弹窗）、
-`04-all-scripts-26-with-screen-rescue`（26 个运维脚本，含黑屏急救 `fix_screen.sh`）。
-
-刷之前确认 `/data/adb/modules` 没有同名旧模块；刷完第一个先重启能正常开机，再刷下一个。
-
-### 保命铁律
-
-1. **不要 unexport pwmchip0**（屏幕背光），黑屏用 `sh /data/adb/modules/rc2_allscripts/scripts/fix_screen.sh` 救
-2. **不要关 zram**，也不要一次 dd 超过 1GB（可用内存只有 1.7GB）
-3. **不要回锁 Bootloader**——RC2 有大疆加密校验，回锁直接变砖（本工具已永久移除该功能）
-4. `swappiness` ≤ 100，`extra_free_kbytes` ≤ 32MB
-5. 刷分区只碰 `boot_a / boot_b / dji_apk / vbmeta_a`
-
-### 已知限制
-
-DJI 的 ROM 从 SELinux 层拦了 `app_process`，scrcpy 的服务端起不来（硬限制）。所以投屏是
-「截图推流」约 1-2 帧/秒，能看能点能滑，但不是 60 帧游戏级投屏。点击是直接往
-`/dev/input/event2` 写触摸事件（`input tap` 会被这台机器静默吞掉）。
-
----
-
-作者：软糖布丁。本工具与大疆（DJI）无任何关系，未获授权或认可。
-会改系统底层参数，可能导致过热/卡死/变砖/黑屏/数据丢失/保修失效，**后果自负**。
