@@ -447,3 +447,24 @@ DJI、DJI RC2、DJI Fly 是深圳市大疆创新科技有限公司的商标。
 本项目的那台 RC2 目前停在 fastboot 模式（能救，`fastboot continue` 即可）。
 
 </div>
+
+
+---
+
+## RC2 搞机工具箱 v6.0（电脑版 / 手机版）
+
+2026-10-31 新增的一整套成品，放在 [`v6-toolbox/`](v6-toolbox/)：
+
+| 内容 | 位置 |
+| --- | --- |
+| 电脑版安装程序（双击安装，内置全部工具） | [Releases](../../releases) 页下载 `RC2Toolbox-Setup-6.0.exe` |
+| 电脑版主程序（免安装） | [Releases](../../releases) 页下载 `RC2Toolbox-6.0.exe` |
+| 手机版 APK v2.25 | [`v6-toolbox/mobile/RC2Toolbox-v2.25.apk`](v6-toolbox/mobile/RC2Toolbox-v2.25.apk) |
+| 9 个 Magisk 模块合集 | [`v6-toolbox/modules/`](v6-toolbox/modules/) |
+| 使用总说明 | [`v6-toolbox/README.md`](v6-toolbox/README.md) |
+| 交接文档（1335 行，含全部铁律） | [`docs/交接文档-第三阶段-20261031.md`](docs/交接文档-第三阶段-20261031.md) |
+| 源码 | [`v6-toolbox/source/`](v6-toolbox/source/) |
+
+电脑版功能：性能/温度/风扇/虚拟内存/Root 模块/应用管理/分区备份/刷机恢复（含 Magisk 刷 Root 四步）/
+投屏+点击控制（真注入触摸）/命令终端（ADB+Fastboot）/**扫描设备**/自定义壁纸。
+作者：软糖布丁。使用前请读免责声明——改底层参数有变砖风险。
