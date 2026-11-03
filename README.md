@@ -10,8 +10,8 @@
 | 部分 | 是什么 | 在哪 |
 |---|---|---|
 | **Root ADB** | 让 `adb shell` 直接进 `uid=0(root)`，重启后依然在；不刷机、不写分区、不烧 eFuse | `Root-ADB.exe`（见下面[下载](#-下载)） |
-| **电脑版工具箱 v6.0** | 性能调频、内存/虚拟内存、风扇温度、Root 模块、应用管理、分区备份、刷机恢复（含 Magisk 刷 Root）、**投屏+点画面操作**、命令终端、扫描设备、自定义壁纸 | [Releases](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest) |
-| **遥控器版 APP v2.25** | 装进遥控器里点着用：总览/性能/风扇/虚拟内存/开机动画/文件/应用/模块/日志/网络 等 14 页 | [`remote/`](remote/) |
+| **电脑版工具箱 v6.16** | 性能调频、内存/虚拟内存、风扇温度、Root 模块、应用管理、分区备份、刷机恢复（含 Magisk 刷 Root）、**投屏+点画面操作**、命令终端、扫描设备、自定义壁纸、**无人机参数调参（14 机型自动识别）**、**虚拟手柄（227Hz 推流）** | [Releases](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) |
+| **遥控器版 APP v2.28** | 装进遥控器里点着用：总览/性能/风扇/虚拟内存/开机动画/文件/应用/模块/日志/网络/调参/简易调参 等 16 页 | [`remote/`](remote/) |
 | **Magisk 模块 ×9** | adb 直通 root、免授权弹窗、26 个运维脚本（含黑屏急救）、zram/磁盘 swap、开机动画、酷狗保活、救砖保护… | [`modules/`](modules/) |
 
 ### 电脑版
@@ -84,9 +84,9 @@
 
 | 内容 | 位置 |
 |---|---|
-| 电脑版 · 安装程序（推荐） | [Releases → v6.0-pc-toolbox](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest) 里的 `RC2Toolbox-Setup-6.0.exe` |
-| 电脑版 · 免安装版 | 同上，`RC2Toolbox-6.0.exe` |
-| 遥控器版 APP（v2.25） | [`remote/RC2Toolbox-v2.25.apk`](remote/RC2Toolbox-v2.25.apk) |
+| 电脑版 · 安装程序（推荐） | [Releases → v6.16-pc-toolbox](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) 里的 `RC2Toolbox-Setup-6.16.exe` |
+| 电脑版 · 免安装版 | 同上，`RC2Toolbox-6.16.exe` |
+| 遥控器版 APP（v2.28） | [`remote/RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk) |
 | 9 个 Magisk 模块 | [`modules/`](modules/) |
 | 源码 | [`source/`](source/) |
 | 图标 | [`RC2Toolbox.ico`](RC2Toolbox.ico) |
@@ -109,7 +109,7 @@ swappiness / drop_caches）、风扇与温度（含背光急救）、Root 与 Ma
 ### 遥控器版（装在遥控器上的那个 APP）
 
 ```
-adb install -r --no-incremental --abi arm64-v8a remote/RC2Toolbox-v2.25.apk
+adb install -r --no-incremental --abi arm64-v8a remote/RC2Toolbox-v2.28.apk
 ```
 
 第一次打开先看条款，同意后永久记住。14 个页面：总览 / 性能 / 风扇温度 / 虚拟内存 / 应用 / 模块 /
@@ -360,7 +360,7 @@ adb shell cat /data/adb-persist/root-adbd.log
 ## 老工具箱 v7.19（可选）
 
 > 这一节讲的是**上一代**遥控器端工具箱（v7.19，源码在 `app/`，仅作历史保留）。
-> 现在用的是**遥控器版 v2.25**，见上文〈RC2 破解工具箱〉一节，APK 在 [`remote/RC2Toolbox-v2.25.apk`](remote/RC2Toolbox-v2.25.apk)。
+> 现在用的是**遥控器版 v2.28**，见上文〈RC2 破解工具箱〉一节，APK 在 [`remote/RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk)。
 
 
 `RC2-Toolbox-v7.19.apk` 是这套东西的**图形外壳**，装到遥控器上直接在屏幕上点。它**不是必需的** —— Root ADB 装好之后，纯命令行已经什么都能干了。
