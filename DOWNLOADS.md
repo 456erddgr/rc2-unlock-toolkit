@@ -6,6 +6,24 @@
 
 ---
 
+## 🆕 最新：两个软件（v6.16 / v2.28，2026-11-03）
+
+| 文件 | 大小 | 下载 | 说明 |
+|---|---|---|---|
+| `RC2Toolbox-Setup-6.16.exe` | 96 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-Setup-6.16.exe) | **电脑版安装程序（推荐）**，内置 ViGEmBus 与 DJI 驱动 |
+| `RC2Toolbox-6.16.exe` | 32 MB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-6.16.exe) | 电脑版免安装绿色版 |
+| `RC2Toolbox-v2.28.apk` | 398 KB | [⬇️ 下载](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-v2.28.apk) | 遥控器版 APP，`adb install -r --no-incremental --abi arm64-v8a` |
+
+Release 主页：[**v6.16-pc-toolbox**](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox)
+
+> 电脑版这一版的重点：**虚拟手柄从「很卡」修到「丝滑」**（单拍最大跳变 539 → 70.7，推流 227Hz），
+> 并且**修掉了一个一直存在的 bug** —— 监听线程空闲 0.5 秒会自杀，导致「连上了却一动不动」。
+> 另外带上了 v6.15 的**无人机参数调参**（14 张机型表自动识别、写前核对名字、缺项如实列出）。
+>
+> 遥控器版 v2.28：页面能滚动了、按机型选参数表、写前名字核对真正生效。
+
+---
+
 ## 🇨🇳 国内镜像（推荐国内用户）
 
 GitHub 在国内经常连不上或龟速，**用这个 123 云盘镜像**（不限速、免登录）：
