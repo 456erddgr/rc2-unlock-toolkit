@@ -1,8 +1,8 @@
 # RC2 破解
 
-DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记录，和折腾出来的一堆工具。
+DJI RC2 那台带屏遥控器（rc331，高通 QCS5430，Android 11）。这里放着折腾它的过程和工具。
 
-**不刷机、不解 BL，先把 `uid=0(root)` 拿到手**，剩下的想动再动。
+**不刷机，不解 BL**，先把 `uid=0(root)` 拿到手。之后要不要往下走，你自己决定。
 
 [![release](https://img.shields.io/github/v/release/456erddgr/rc2-unlock-toolkit?label=release&color=2f81f7)](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest)
 [![downloads](https://img.shields.io/github/downloads/456erddgr/rc2-unlock-toolkit/total?color=3fb950)](https://github.com/456erddgr/rc2-unlock-toolkit/releases)
@@ -10,15 +10,18 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078d4)](#)
 [![license](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
 
-**工具在另一个仓库：** [RC 搞机工具箱](https://github.com/456erddgr/rc-gaoji-toolbox) ——
+真正天天用的工具在另一个仓库：[RC 搞机工具箱](https://github.com/456erddgr/rc-gaoji-toolbox)。
 分区备份、ADB 直刷、投屏点击、无人机调参，双击就能用。
 
-**直接下载：** [两个软件（工具箱 v6.16 + 遥控器 App v2.28）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) ·
-[Root ADB v7.19（含模块 / 教程视频 / 第三方 App）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19)
+下载：[两个软件（工具箱 v6.16 + 遥控器版 v2.28）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) ·
+[Root ADB v7.19（教程视频、9 个模块、第三方 App 都在这）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19) ·
+[123 云盘](https://1843626542.share.123pan.cn/123pan/VX07Td-v8SoA?pwd=nRmH#)（提取码 `nRmH`）
 
-**目录：** [四件套](#四件套) · [下载](#-下载) · [工具箱（电脑版 + 遥控器版）](#rc2-破解工具箱电脑版--遥控器版) · [两条命令用起来](#两条命令用起来) · [怎么验证装好了](#装完是什么样怎么验证) · [工作原理](#工作原理) · [常见问题](#常见问题) · [免责声明](#免责声明)
+看哪儿：[四件套](#四件套) · [下载](#-下载) · [工具箱](#rc2-破解工具箱电脑版--遥控器版) ·
+[两条命令用起来](#两条命令用起来) · [装好了怎么验证](#装完是什么样怎么验证) · [原理](#工作原理) ·
+[常见问题](#常见问题) · [免责声明](#免责声明)
 
-**文档：** [安装与使用指南](docs/安装与使用指南.md) · [技术记录](docs/技术记录.md)
+文档：[安装与使用指南](docs/安装与使用指南.md) · [技术记录](docs/技术记录.md)
 
 ---
 
@@ -102,22 +105,19 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 
 ### 下载
 
-**GitHub（推荐）**
+**GitHub**
 
 | 要什么 | 点哪个 |
 | --- | --- |
-| 电脑版 · 安装程序（**推荐**，自带 ViGEmBus + DJI USB 驱动） | [`RC2Toolbox-Setup-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-Setup-6.16.exe) · 96 MB |
-| 电脑版 · 绿色版（不写注册表，驱动要自己装） | [`RC2Toolbox-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-6.16.exe) · 32 MB |
-| 遥控器版 App（v2.28） | [`RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk) · 398 KB |
+| 安装程序（推荐）。ViGEmBus 和 DJI 驱动都在里面 | [`RC2Toolbox-Setup-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-Setup-6.16.exe) · 96 MB |
+| 绿色版。不写注册表，驱动自己装 | [`RC2Toolbox-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-6.16.exe) · 32 MB |
+| 遥控器版 App v2.28 | [`RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk) · 398 KB |
 | 9 个 Magisk 模块 | [`modules/`](modules/) |
-| 源码 / 图标 | [`source/`](source/) · [`RC2Toolbox.ico`](RC2Toolbox.ico) |
+| 源码、图标 | [`source/`](source/) · [`RC2Toolbox.ico`](RC2Toolbox.ico) |
 
-**123 云盘（GitHub 下不动的时候）**
+**123 云盘**（GitHub 下不动时用）：**[点这里](https://1843626542.share.123pan.cn/123pan/VX07Td-v8SoA?pwd=nRmH#)**，提取码 `nRmH`。同一批文件，免登录不限速。
 
-👉 **[RC2 · 123 云盘](https://1843626542.share.123pan.cn/123pan/VX07Td-v8SoA?pwd=nRmH#)**　提取码 `nRmH`　——　同一批文件，免登录、不限速。
-
-> 为什么不把 exe 直接塞进仓库？主程序 32 MB、安装程序 96 MB（大头是那两个 Windows 驱动包），
-> 放进 Git 历史会把它撑成几个 G，以后谁 clone 都难受。所以二进制都在 Releases，仓库只留源码。
+exe 为什么不进仓库？安装包 96 MB，大头是那两个 Windows 驱动。塞进 Git 历史，以后谁 clone 都难受。
 
 ### 电脑版能干什么
 
