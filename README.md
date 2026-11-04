@@ -16,7 +16,9 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 **直接下载：** [两个软件（工具箱 v6.16 + 遥控器 App v2.28）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) ·
 [Root ADB v7.19（含模块 / 教程视频 / 第三方 App）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19)
 
-**目录：** [Root ADB](#-root-adb) · [电脑版工具箱](#-电脑版工具箱) · [遥控器版 APP](#-遥控器版-app) · [Magisk 模块](#-magisk-模块) · [下载](#-下载) · [安装与使用指南](docs/安装与使用指南.md) · [技术记录](docs/技术记录.md)
+**目录：** [四件套](#四件套) · [下载](#-下载) · [工具箱（电脑版 + 遥控器版）](#rc2-破解工具箱电脑版--遥控器版) · [两条命令用起来](#两条命令用起来) · [怎么验证装好了](#装完是什么样怎么验证) · [工作原理](#工作原理) · [常见问题](#常见问题) · [免责声明](#免责声明)
+
+**文档：** [安装与使用指南](docs/安装与使用指南.md) · [技术记录](docs/技术记录.md)
 
 ---
 
