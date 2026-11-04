@@ -106,9 +106,9 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 
 | 要什么 | 点哪个 |
 | --- | --- |
-| 电脑版 · 安装程序（**推荐**，自带 ViGEmBus + DJI USB 驱动） | [`RC2Toolbox-Setup-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-Setup-6.16.exe) · 101 MB |
-| 电脑版 · 绿色版（不写注册表，驱动要自己装） | [`RC2Toolbox-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-6.16.exe) · 34 MB |
-| 遥控器版 App（v2.28） | [`RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk) · 408 KB |
+| 电脑版 · 安装程序（**推荐**，自带 ViGEmBus + DJI USB 驱动） | [`RC2Toolbox-Setup-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-Setup-6.16.exe) · 96 MB |
+| 电脑版 · 绿色版（不写注册表，驱动要自己装） | [`RC2Toolbox-6.16.exe`](https://github.com/456erddgr/rc2-unlock-toolkit/releases/download/v6.16-pc-toolbox/RC2Toolbox-6.16.exe) · 32 MB |
+| 遥控器版 App（v2.28） | [`RC2Toolbox-v2.28.apk`](remote/RC2Toolbox-v2.28.apk) · 398 KB |
 | 9 个 Magisk 模块 | [`modules/`](modules/) |
 | 源码 / 图标 | [`source/`](source/) · [`RC2Toolbox.ico`](RC2Toolbox.ico) |
 
@@ -116,7 +116,7 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 
 👉 **[RC2 · 123 云盘](https://1843626542.share.123pan.cn/123pan/VX07Td-v8SoA?pwd=nRmH#)**　提取码 `nRmH`　——　同一批文件，免登录、不限速。
 
-> 为什么不把 exe 直接塞进仓库？主程序 34 MB、安装程序 101 MB（大头是那两个 Windows 驱动包），
+> 为什么不把 exe 直接塞进仓库？主程序 32 MB、安装程序 96 MB（大头是那两个 Windows 驱动包），
 > 放进 Git 历史会把它撑成几个 G，以后谁 clone 都难受。所以二进制都在 Releases，仓库只留源码。
 
 ### 电脑版能干什么
