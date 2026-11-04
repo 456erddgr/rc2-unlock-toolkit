@@ -8,7 +8,7 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 [![downloads](https://img.shields.io/github/downloads/456erddgr/rc2-unlock-toolkit/total?color=3fb950)](https://github.com/456erddgr/rc2-unlock-toolkit/releases)
 [![stars](https://img.shields.io/github/stars/456erddgr/rc2-unlock-toolkit?color=f0b400)](https://github.com/456erddgr/rc2-unlock-toolkit/stargazers)
 [![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078d4)](#)
-[![license](https://img.shields.io/github/license/456erddgr/rc2-unlock-toolkit)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
 
 **工具在另一个仓库：** [RC 搞机工具箱](https://github.com/456erddgr/rc-gaoji-toolbox) ——
 分区备份、ADB 直刷、投屏点击、无人机调参，双击就能用。
