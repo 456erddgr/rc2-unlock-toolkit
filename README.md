@@ -1,9 +1,24 @@
-# RC2 破解 · DJI RC2 一站式破解工具集
+# RC2 破解
 
-> 一个仓库搞定 **DJI RC2 带屏遥控器**（平台代号 `rc331`，高通 QCS5430，Android 11）的破解与调校：
-> **Root ADB 持久权限** + **电脑版搞机工具箱** + **遥控器版 APP** + **9 个 Magisk 模块**。
->
-> 不刷机、不解锁 Bootloader，也能先把真正的 `uid=0(root)` shell 拿到手。
+DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记录，和折腾出来的一堆工具。
+
+**不刷机、不解 BL，先把 `uid=0(root)` 拿到手**，剩下的想动再动。
+
+[![release](https://img.shields.io/github/v/release/456erddgr/rc2-unlock-toolkit?label=release&color=2f81f7)](https://github.com/456erddgr/rc2-unlock-toolkit/releases/latest)
+[![downloads](https://img.shields.io/github/downloads/456erddgr/rc2-unlock-toolkit/total?color=3fb950)](https://github.com/456erddgr/rc2-unlock-toolkit/releases)
+[![stars](https://img.shields.io/github/stars/456erddgr/rc2-unlock-toolkit?color=f0b400)](https://github.com/456erddgr/rc2-unlock-toolkit/stargazers)
+[![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-0078d4)](#)
+[![license](https://img.shields.io/github/license/456erddgr/rc2-unlock-toolkit)](LICENSE)
+
+**工具在另一个仓库：** [RC 搞机工具箱](https://github.com/456erddgr/rc-gaoji-toolbox) ——
+分区备份、ADB 直刷、投屏点击、无人机调参，双击就能用。
+
+**直接下载：** [两个软件（工具箱 v6.16 + 遥控器 App v2.28）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v6.16-pc-toolbox) ·
+[Root ADB v7.19（含模块 / 教程视频 / 第三方 App）](https://github.com/456erddgr/rc2-unlock-toolkit/releases/tag/v7.19)
+
+**目录：** [Root ADB](#-root-adb) · [电脑版工具箱](#-电脑版工具箱) · [遥控器版 APP](#-遥控器版-app) · [Magisk 模块](#-magisk-模块) · [下载](#-下载) · [安装与使用指南](docs/安装与使用指南.md) · [技术记录](docs/技术记录.md)
+
+---
 
 ## 四件套
 
