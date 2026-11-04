@@ -62,7 +62,7 @@ DJI RC2 带屏遥控器（`rc331`，高通 QCS5430，Android 11）的折腾记�
 - [工作原理](#工作原理)
 - [边界与风险](#边界与风险)
 - [RC2 破解工具箱（电脑版 + 遥控器版）](#rc2-破解工具箱电脑版--遥控器版)
-- [老工具箱 v7.19（可选）](#附带rc2-工具箱可选图形界面)
+- [老工具箱 v7.19（可选）](#老工具箱-v719可选)
 - [设备信息](#设备信息)
 - [仓库里有什么](#仓库里有什么)
 - [自己编译工具箱](#自己编译工具箱)
@@ -537,7 +537,7 @@ A：没有。这是对**自己拥有的设备**做的安全研究记录，与大
 
 | 组件 | 来源 / 作者 | 说明 |
 |---|---|---|
-| **`Root-ADB.exe`（RC331 Root ADB 安装工具）** | 原作者 **Telegram [@degreeds](https://t.me/degreeds) / GitHub [lmdgreeds](https://github.com/lmdgreeds)**；原文件名 `RC331Setup.exe` | **著作权归原作者。** 本仓库分发的是**汉化增强版 v1.4.5**，仅做界面与提示中文化，核心安装逻辑来自原作者。原作者如要求移除，会立即处理。 |
+| **`Root-ADB.exe`（RC331 Root ADB 安装工具）** | 原作者 **Telegram [@degreeds](https://t.me/degreeds) / GitHub [lmdgreeds](https://github.com/lmdegreeds)**；原文件名 `RC331Setup.exe` | **著作权归原作者。** 本仓库分发的是**汉化增强版 v1.4.5**，仅做界面与提示中文化，核心安装逻辑来自原作者。原作者如要求移除，会立即处理。 |
 | **`RC331 Root ADB`（`dev.rc331.rootadb`）** | 同上 | 随 `Root-ADB.exe` 内置分发，负责开机自愈。 |
 | **`ADB-Unlock-RC.exe`（Fly 网络 ADB 设置工具）** | `Fly Network ADB` v1.0.0（`Fly-Network-ADB-Setup.exe`） | 第三方工具，本项目未获再分发授权，附带仅为本机备份。 |
 | **RC2 工具箱（`app/`）** | 本项目作者 | 原创源码，MIT。 |
